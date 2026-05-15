@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifiko Artikull</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container py-4">
+        <div class="form-card">
+            <section class="form-hero d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                <div>
+                    <p class="eyebrow mb-2">Paneli i servisit</p>
+                    <h1 class="h2 mb-2">Modifiko artikull</h1>
+                    <p class="mb-0">Perditeso cmimin, kategorine, pershtatjen ose gjendjen e artikullit.</p>
+                </div>
+                <a href="index.html" class="btn btn-outline-light">Mbrapa</a>
+            </section>
+
+            <div class="card form-shell shadow-sm">
+                <div class="card-body">
+                    <form id="item-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="emri" class="form-label fw-semibold">Emri</label>
+                                <input type="text" id="emri" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="tipi" class="form-label fw-semibold">Tipi</label>
+                                <select id="tipi" class="form-select form-select-lg" required>
+                                    <option value="">Zgjidh tipin</option>
+                                    <option value="Pjese">Pjese</option>
+                                    <option value="Sherbim">Sherbim</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="kategoria" class="form-label fw-semibold">Kategoria</label>
+                                <input type="text" id="kategoria" class="form-control form-control-lg" placeholder="Frena, Motor, Elektrike, Mirembajtje..." required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="pershtatja" class="form-label fw-semibold">Pershtatja</label>
+                                <input type="text" id="pershtatja" class="form-control form-control-lg" placeholder="Mercedes E-Class, BMW, Universal..." required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cmimi" class="form-label fw-semibold">Cmimi</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="number" id="cmimi" class="form-control" min="0" step="0.01" required>
+                                    <span class="input-group-text">€</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="gjendja" class="form-label fw-semibold">Gjendja</label>
+                                <select id="gjendja" class="form-select form-select-lg" required>
+                                    <option value="">Zgjidh gjendjen</option>
+                                    <option value="Ne stok">Ne stok</option>
+                                    <option value="Me porosi">Me porosi</option>
+                                    <option value="Me aplikim">Me aplikim</option>
+                                    <option value="I disponueshem">I disponueshem</option>
+                                    <option value="Nuk disponohet">Nuk disponohet</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <button type="submit" class="btn btn-warning btn-lg fw-semibold">Ruaj ndryshimet</button>
+                            <a href="index.html" class="btn btn-outline-secondary btn-lg">Anulo</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/store-http.js"></script>
+    <script src="scripts/edit-item.js"></script>
+</body>
+</html>
