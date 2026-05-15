@@ -17,3 +17,5 @@ http://localhost:5000/ArtikujtAuto
 
 ne google nqs do te hapesh api:
 http://localhost:5000/swagger
+
+Punoi Laert lani dhe Klea Collaku
